@@ -1,0 +1,60 @@
+// resets 
+
+* {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body, html {
+    height: 100%;
+}
+
+::selection {
+    background: rgb(1, 199, 196);
+}
+
+// variables
+
+$primary-color: #272727;
+$secondary-color: #ff0000;
+$third-color: rgba(255, 166, 0, 0.933);
+
+// mixins
+
+@mixin transition-ease {
+    transition: all .4s ease;
+}
+
+// functions
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media screen and (max-width: 767.9px) {
+        @content;
+    }
+}
