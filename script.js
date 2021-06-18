@@ -35,7 +35,7 @@ var imgHeight = img.scrollHeight;
 
 window.addEventListener("scroll", function(event){
 scrollPos = body.scrollTop || html.scrollTop;
-if (scrollPos >= imgHeight) {
+if (scrollPos >= (imgHeight * .6)) {
     nav.classList.add("nav-background");    
 } else {
     nav.classList.remove("nav-background");    
