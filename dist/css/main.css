@@ -518,6 +518,9 @@ body, html {
   .social-icons {
     font-size: 26px !important;
   }
+  .home .dynamic-text {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 767.9px) {
@@ -573,7 +576,7 @@ main {
 }
 
 main .social-icons {
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   left: 1rem;
   font-size: 17px;
